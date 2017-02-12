@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>main</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+        .edit-area{
+	        padding: 100px;
+        }
+
+        .main-title{
+            text-align: center;
+
+        }
+
+        .hero{
+            padding-top: 100px;
+            background-color: #eeeeee;
+            padding-bottom: 100px;
+        }
+
+        blockquote{
+            font-family: 'copperplate', fantasy;
+            position: absolute;
+            top: 200px;
+            left: 340px;
+        }
+        .student-name{
+            font-family: 'copperplate', monospace;
+        }
+        .status-input{
+            font-family: "copperplate", monospace, serif;
+            border-bottom: 0;
+            width: 400px;
+        }
+        .submit{
+            border-top: 0;
+            width: 400px;
+        }
+        .login-input{
+            top: 300px;
+            position: absolute;
+            left: 450px;
+        }
+        .title{
+            font-family: 'copperplate', sans-serif;
+            background-color: #f6f1de;
+            height: 50px;
+            width: 1270px;
+            display: inline-block;
+            text-align: center;
+        }
+        #posts{
+            position: absolute;
+            top: 500px;
+        }
+        .content{
+            font-family: "copperplate", sans-serif;
+        }
+        .username{
+            font-family: "Zapfino", Helvetica, Arial, sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+	<div class="">
+		<div class="">
+			<h3 class="text-muted">MiniFB</h3>
+			<blockquote>
+				<p>Hello, world! Nice to meet You, world!</p>
+				<small>老子</small>
+			</blockquote>
+
+		</div>
+		
+	</div>
+    <br/>
+    <h1 class="title"><span class="glyphicon glyphicon-globe"></span>meta academy mini Facebook</h1>
+	<script type="text/x-handlebars-template" id="send">
+	<div class="">
+		
+		<div class="">
+			<div class="login-input">
+				<h2 class="student-name">{{username}}</h2>
+				<input type="text" class="status-input form-control" id="{{username}}-input" placeholder="your text here" required autofocus>
+				<button class="submit btn btn-primary" id="student-submit">确定</button>
+			</div>
+		</div>
+
+	</div>
+    </script>
+    <div id="loginArea"></div>
+
+	<div class="">
+		
+		<div id="posts" class="am-g">
+
+		</div>
+	</div>
+
+	<script id="posts-list" type="text/x-handlebars-template">
+		{{#each posts}}
+		<div class="post">
+
+			<div class="caption">
+				<h3 class="username">{{{username}}}</h3>
+				<p class="content">{{{content}}}</p>
+				<p class="content">发布时间：{{{time}}}</p>
+			</div>
+
+		</div>
+		{{/each}}
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<script type="text/javascript" src="js/av.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
