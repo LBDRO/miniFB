@@ -19,7 +19,7 @@ $(function () {
     var source = $("#send").html();
 	var template = Handlebars.compile(source);
     var user = AV.User.current();
-    context.username = user.get("username");
+	context.name = user.get("username");
     var html = template(context);
 	$("#loginArea").html(html);
 });
@@ -74,6 +74,6 @@ $( document ).ready(function() {
 
 		refreshPosts();
 
-	})
+	});
 
 });

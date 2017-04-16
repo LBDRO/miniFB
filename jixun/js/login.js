@@ -15,7 +15,7 @@ $("#submit").click(function() {
         });
 
 
-        window.location.href = "../leancloud 2.html";
+        window.location.href = "leancloud 2.html";
     }, function(error){
         alert(JSON.stringify(error));
         alert("there is an Error with your username or password");
